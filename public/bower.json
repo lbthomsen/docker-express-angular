@@ -1,0 +1,28 @@
+{
+  "name": "docker-express-angular",
+  "homepage": "https://github.com/lbthomsen/docker-express-angular",
+  "authors": [
+    "Lars Boegild Thomsen <lth@netcompartner.com>"
+  ],
+  "description": "Test",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "jquery": "~2.2.0",
+    "bootstrap": "~3.3.6"
+  }, 
+  "clean": {
+    "dist" : ['bower_components/*/*', '!bower_components/*/dist']
+  }
+}
