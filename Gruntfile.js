@@ -11,13 +11,26 @@ module.exports = function(grunt) {
         src: 'src/<%= pkg.name %>.js',
         dest: 'build/<%= pkg.name %>.min.js'
       }
+    },
+ bower: {
+    install: {
+      options: {
+        targetDir: './public/lib',
+        layout: 'byType',
+        install: true,
+        verbose: true,
+        cleanTargetDir: true,
+        cleanBowerDir: true,
+        bowerOptions: {}
+      }
     }
+  }
   });
 
   // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-bower-task');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['bower']);
 
 };
