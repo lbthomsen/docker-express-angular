@@ -1,5 +1,18 @@
-<nav>
-    nav bar goes here
+<nav id="mainMenu" class="navbar navbar-default navbar-inverse" role="navigation">
+    <ul class="nav navbar-nav">
+        <li class="nav-item" ng-class="{active:navCtrl.isSet(1)}">
+            <a class="nav-link" href="" ng-click="navCtrl.setTab(1)">Home</a>
+        </li>
+        <li class="nav-item" ng-class="{active:navCtrl.isSet(2)}">
+            <a class="nav-link" href="" ng-click="navCtrl.setTab(2)">Firmware</a>
+        </li>
+        <li class="nav-item" ng-class="{active:navCtrl.isSet(3)}">
+            <a class="nav-link" href="" ng-click="navCtrl.setTab(3)">Settings</a>
+        </li>
+        <li class="nav-item" ng-class="{active:navCtrl.isSet(4)}">
+            <a class="nav-link" href="" ng-click="navCtrl.setTab(4)">About</a>
+        </li>
+    </ul>
 </nav>
 <!--+
     | vim: ts=4 et
