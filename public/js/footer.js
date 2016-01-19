@@ -16,7 +16,7 @@
       restrict: 'E', 
       templateUrl: '/footer.html', 
       controller: 'FooterController', 
-      controllerAs: 'footer'
+      controllerAs: 'footerCtrl'
     }
   });
 

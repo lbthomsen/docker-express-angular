@@ -3,11 +3,9 @@
  */
 (function() {
 
-  var app = angular.module('docker-express-angular', ['app-footer']);
+  var app = angular.module('docker-express-angular', ['app-header','app-nav','app-footer']);
 
   app.controller("AppController", function() {
-
-    this.title = "Docker/Express/Angular Demo Application";
 
   });
 
