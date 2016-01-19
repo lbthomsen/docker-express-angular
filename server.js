@@ -12,7 +12,7 @@ var config = require('./config'); // get our config file
 var User   = require('./app/models/user'); // get our mongoose model
     
 // Static settings
-var root = __dirname + "/www/";
+var root = __dirname + "/public/";
 
 // =======================
 // configuration =========
@@ -47,9 +47,9 @@ app.get('/js/*', function(req, res) {
     res.sendfile(root + "/js/" + req.params[0]);
 });
 
-app.get('/img/*', function(req, res) {
-    console.log("Request: " + "/img/" + req.params[0]);
-    res.sendfile(root + "/img/" + req.params[0]);
+app.get('/images/*', function(req, res) {
+    console.log("Request: " + "/images/" + req.params[0]);
+    res.sendfile(root + "/images/" + req.params[0]);
 });
 
 app.get('/lib/*', function(req, res) {
