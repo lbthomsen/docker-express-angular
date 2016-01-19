@@ -1,0 +1,10 @@
+{
+  "name": "docker-express-angular",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Docker container running an node.js/express server serving an angular application",
+  "author": "Lars Boegild Thomsen <lth@bright-things.com>",
+  "dependencies": {
+    "express": "^5.0.0-alpha.2"
+  }
+}
