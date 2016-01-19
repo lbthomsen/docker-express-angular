@@ -37,6 +37,11 @@ app.get('/', function(req, res) {
     res.sendFile(root + 'index.html');
 });
 
+app.get('/*.html', function(req, res) {
+    console.log("HTML requested");
+    res.sendFile(root + req.params[0] + ".html");
+});
+
 app.get('/css/*', function(req, res) {
     console.log("Request: " + "/css/" + req.params[0]);
     res.sendFile(root + "/css/" + req.params[0]);
