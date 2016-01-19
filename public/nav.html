@@ -4,16 +4,25 @@
             <a class="nav-link" href="" ng-click="navCtrl.setTab(1)">Home</a>
         </li>
         <li class="nav-item" ng-class="{active:navCtrl.isSet(2)}">
-            <a class="nav-link" href="" ng-click="navCtrl.setTab(2)">Firmware</a>
+            <a class="nav-link" href="" ng-click="navCtrl.setTab(2)">Settings</a>
         </li>
         <li class="nav-item" ng-class="{active:navCtrl.isSet(3)}">
-            <a class="nav-link" href="" ng-click="navCtrl.setTab(3)">Settings</a>
-        </li>
-        <li class="nav-item" ng-class="{active:navCtrl.isSet(4)}">
-            <a class="nav-link" href="" ng-click="navCtrl.setTab(4)">About</a>
+            <a class="nav-link" href="" ng-click="navCtrl.setTab(3)">About</a>
         </li>
     </ul>
 </nav>
+
+<section class="container-fluid body-content">
+
+    <div ng-show="navCtrl.isSet(1)" ng-include="'home.html'"> </div>
+
+    <div ng-show="navCtrl.isSet(2)" ng-include="'settings.html'"> </div>
+
+    <div ng-show="navCtrl.isSet(3)" ng-include="'about.html'"> </div>
+
+</section>
+
+
 <!--+
     | vim: ts=4 et
     +-->
