@@ -39,22 +39,22 @@ app.get('/', function(req, res) {
 
 app.get('/css/*', function(req, res) {
     console.log("Request: " + "/css/" + req.params[0]);
-    res.sendfile(root + "/css/" + req.params[0]);
+    res.sendFile(root + "/css/" + req.params[0]);
 });
 
 app.get('/js/*', function(req, res) {
     console.log("Request: " + "/js/" + req.params[0]);
-    res.sendfile(root + "/js/" + req.params[0]);
+    res.sendFile(root + "/js/" + req.params[0]);
 });
 
 app.get('/images/*', function(req, res) {
     console.log("Request: " + "/images/" + req.params[0]);
-    res.sendfile(root + "/images/" + req.params[0]);
+    res.sendFile(root + "/images/" + req.params[0]);
 });
 
 app.get('/lib/*', function(req, res) {
     console.log("Request: " + "/lib/" + req.params[0]);
-    res.sendfile(root + "/lib/" + req.params[0]);
+    res.sendFile(root + "/lib/" + req.params[0]);
 });
 
 // Do nuke this from final app

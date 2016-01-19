@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     install: {
       options: {
         targetDir: './public/lib',
-        layout: 'byType',
+        layout: 'byComponent',
         install: true,
         verbose: true,
         cleanTargetDir: true,
