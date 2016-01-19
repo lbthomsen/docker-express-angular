@@ -176,4 +176,4 @@ app.use('/api', apiRoutes);
 app.listen(port);
 console.log('Magic happens at http://localhost:' + port);
 
-
+// vim: ts=4 et
