@@ -1,0 +1,22 @@
+
+<div ng-show="!authCtrl.isAuthenticated()">
+    <form name="loginForm" class="navbar-form navbar-right" role="search" ng-submit="authCtrl.login()">
+        <div class="form-group">
+            <input type="text" class="form-control" name="username" placeholder="Username" ng-model="authCtrl.username">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="password" placeholder="Password" ng-model="authCtrl.password">
+        </div>
+        <button type="submit" class="btn btn-default">Sign In</button>
+    </form>
+</div>
+
+<div ng-show="authCtrl.isAuthenticated()">
+    <form name="logoutForm" class="navbar-form navbar-right" role="search" ng-submit="authCtrl.logout()">
+        <button type="submit" class="btn btn-default">Sign Out</button>
+    </form>
+</div>
+
+<!--+
+    | vim: ts=4 et
+    +-->
