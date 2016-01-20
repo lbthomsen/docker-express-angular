@@ -5,11 +5,13 @@
 
   var app = angular.module('docker-express-angular', ['app-header', 'app-nav','app-auth','app-footer']);
 
-  app.controller("AppController", function() {
+  app.controller("AppController", ['$scope', '$log', 'AuthData', function($scope, $log, authData) {
 
-    console.log("AppController called!");
+    $log.debug("AppController Created!");
 
-  });
+    $scope.authData = authData;
+
+  }]);
 
 })();
 /* 

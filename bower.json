@@ -24,9 +24,15 @@
   },
   "exportsOverride": {
     "bootstrap": {
-      "js": "dist/js/*.js", 
+      "js": "dist/js/bootstrap.min.js", 
       "css": "dist/css/*",
       "fonts": "dist/fonts/glyph*"
+    }, 
+    "angular": {
+      "js": "angular.min.js"
+    }, 
+    "jquery": {
+      "js": "dist/jquery.min.js"
     }
   }
 }

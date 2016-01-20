@@ -2,10 +2,10 @@
 <div ng-show="!authCtrl.isAuthenticated()">
     <form name="loginForm" class="navbar-form navbar-right" role="search" ng-submit="authCtrl.login()">
         <div class="form-group">
-            <input type="text" size="10" class="form-control" name="username" placeholder="Username" ng-model="authCtrl.username">
+            <input type="text" size="10" class="form-control" name="username" placeholder="Username" ng-model="authData.username">
         </div>
         <div class="form-group">
-            <input type="text" size="10" class="form-control" name="password" placeholder="Password" ng-model="authCtrl.password">
+            <input type="text" size="10" class="form-control" name="password" placeholder="Password" ng-model="authData.password">
         </div>
         <button type="submit" class="btn btn-default">Sign In</button>
     </form>

@@ -4,6 +4,12 @@
 <p>
     Welcome to this demo application.
 </p>
+<p ng-show="!authData.authenticated">
+    User is anonymous
+</p>
+<p ng-show="authData.authenticated">
+    User is {{authData.username}}
+</p>
 </div>
 
 <!--+
