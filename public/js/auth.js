@@ -18,9 +18,14 @@
   });
 
 
-  auth.controller("AuthController", ['$scope', '$http', '$log', 'AuthData', function($scope, $http, $log, authData) {
+  auth.controller("AuthController", ['$scope', '$http', '$log', 'AuthData', 'localStorageService', function($scope, $http, $log, authData, localStorageService) {
 
     $scope.authData = authData;
+
+    // Set the local storage prefix
+    //this.config(function (localStorage) {
+    //  localStorage.setPrefix('demo');
+    //});
 
     this.login = function() {
       $log.debug("Login called username = " + authData.username + " password = " + authData.password);
@@ -38,8 +43,10 @@
           authData.token = result.token;
           authData.authenticated = true;
           authData.admin = result.admin;
-        } else {
 
+          localStorageService.set('token', result.token);
+        } else {
+          alert(result.message);
         }
       }).error(function() {
         $log.debug("Got error");

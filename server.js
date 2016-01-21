@@ -123,7 +123,7 @@ apiRoutes.post('/authenticate', function(req, res) {
         // if user is found and password is right
         // create a token
         var token = jwt.sign(user, app.get('superSecret'), {
-          expiresInMinutes: 1440 // expires in 24 hours
+          expiresIn: "1h" 
         });
 
         // return the information including token as JSON
@@ -152,7 +152,7 @@ apiRoutes.use(function(req, res, next) {
     // verifies secret and checks exp
     jwt.verify(token, app.get('superSecret'), function(err, decoded) {      
       if (err) {
-        return res.json({ success: false, message: 'Failed to authenticate token.' });    
+        return res.status(403).send({ success: false, message: 'Failed to authenticate token.' });    
       } else {
         // if everything is good, save to request for use in other routes
         req.decoded = decoded;    
@@ -175,6 +175,11 @@ apiRoutes.use(function(req, res, next) {
 // route to show a random message (GET http://localhost:8080/api/)
 apiRoutes.get('/', function(req, res) {
   res.json({ message: 'Welcome to the coolest API on earth!' });
+});
+
+// return the decoded token
+apiRoutes.get('/me', function(req, res) {
+    res.json(req.decoded);
 });
 
 // route to return all users (GET http://localhost:8080/api/users)
